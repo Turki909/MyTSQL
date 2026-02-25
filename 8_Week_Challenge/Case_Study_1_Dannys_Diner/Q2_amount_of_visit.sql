@@ -1,5 +1,5 @@
 -- -----------------------------------------------------------------------------
--- Question 2:How many days has each customer visited the restaurant?
+-- Question 2:How many days has each customer visited the restaurant?           |
 -- -----------------------------------------------------------------------------
 
 SELECT
