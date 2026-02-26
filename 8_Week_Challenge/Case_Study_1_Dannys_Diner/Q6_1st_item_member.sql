@@ -1,5 +1,5 @@
 -- --------------------------------------------------------------------------------------------------------------
--- 				 Which item was purchased first by the customer after they became a member?                   |
+-- Q6		 Which item was purchased first by the customer after they became a member?                     |
 -- --------------------------------------------------------------------------------------------------------------
 WITH cte as(
 	SELECT 

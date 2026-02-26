@@ -1,5 +1,5 @@
 -- --------------------------------------------------------------------------------------------------------------
--- 			  What is the total items and amount spent for each member before they became a member?              |
+-- Q8	    What is the total items and amount spent for each member before they became a member?   |
 -- --------------------------------------------------------------------------------------------------------------
 SELECT 
 	s.customer_id,

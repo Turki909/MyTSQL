@@ -1,5 +1,5 @@
 -- -----------------------------------------------------------------------------
--- Question 1: What is the total amount each customer spent at the restaurant?
+-- Q1      What is the total amount each customer spent at the restaurant?     |
 -- -----------------------------------------------------------------------------
 
 SELECT 

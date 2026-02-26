@@ -1,5 +1,5 @@
 -- ------------------------------------------------------------------------------
--- Question 3. What was the first item from the menu purchased by each customer?|
+-- Q3 What was the first item from the menu purchased by each customer?          |
 -- ------------------------------------------------------------------------------
 with cte as(
 	select 

@@ -1,5 +1,5 @@
 -- --------------------------------------------------------------------------------------------------------------
--- 				         Which item was purchased just before the customer became a member?                      |
+-- Q7		   Which item was purchased just before the customer became a member?                            |
 -- --------------------------------------------------------------------------------------------------------------
 
 WITH cte as (
