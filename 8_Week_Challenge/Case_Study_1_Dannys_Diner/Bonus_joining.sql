@@ -18,4 +18,4 @@ INNER JOIN menu
 LEFT JOIN members
 	ON sales.customer_id = members.customer_id
 
-GO
+--GO
