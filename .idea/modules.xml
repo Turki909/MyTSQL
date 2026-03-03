@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TSQL.iml" filepath="$PROJECT_DIR$/.idea/TSQL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/8_Week_TSQL_Challenge.iml" filepath="$PROJECT_DIR$/.idea/8_Week_TSQL_Challenge.iml" />
     </modules>
   </component>
 </project>
