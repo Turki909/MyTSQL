@@ -22,13 +22,57 @@ INNER JOIN pizza_toppings
 -- Q02: What was the most commonly added extra?
 ------------------------------------------------------------------------
 
+WITH cte AS (
+    SELECT DISTINCT
+        c.order_id,
+        c.extras,
+        CAST(value AS INT) as ingredient
+ N
+    FROM customer_orders_clean AS c
+    INNER JOIN runner_orders_clean AS r
+        ON r.order_id = c.order_id
+    CROSS APPLY STRING_SPLIT(c.extras, ',')
 
+    WHERE r.cancellation IS NULL
+      AND c.extras IS NOT NULL
+
+)
+SELECT TOP 1 WITH TIES
+    topping_name,
+    count(topping_name) AS count_of_topping
+from cte
+INNER JOIN pizza_toppings
+on pizza_toppings.topping_id = cte.ingredient
+GROUP BY topping_name
+ORDER BY count_of_topping DESC;
 
 ------------------------------------------------------------------------
 -- Q03: What was the most common exclusion?
 ------------------------------------------------------------------------
 
+WITH cte AS (
+    SELECT
+        c.order_id,
+        c.exclusions,
+        CAST(value AS INT) as ingredient
 
+    FROM customer_orders_clean AS c
+    INNER JOIN runner_orders_clean AS r
+        ON r.order_id = c.order_id
+    CROSS APPLY STRING_SPLIT(c.exclusions, ',')
+
+    WHERE r.cancellation IS NULL
+      AND c.exclusions IS NOT NULL
+
+)
+SELECT TOP 1 WITH TIES
+    topping_name,
+    count(topping_name) AS count_of_topping
+from cte
+INNER JOIN pizza_toppings
+on pizza_toppings.topping_id = cte.ingredient
+GROUP BY topping_name
+ORDER BY count_of_topping DESC;
 
 ------------------------------------------------------------------------
 -- Q04: Generate an order item for each record in the customers_orders
