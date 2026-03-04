@@ -1,3 +1,10 @@
+/* ---------------------------------------------------------------------------
+-- Case Study #1: Danny's Diner
+-- Author: Turki Alajmi
+-- Date: March 2026
+-- Tool used: Microsoft SQL Server (T-SQL)
+--------------------------------------------------------------------------- */
+
 ------------------------------------------------------------------------
 --Q01 What is the total amount each customer spent at the restaurant?
 ------------------------------------------------------------------------
@@ -207,4 +214,5 @@ INNER JOIN members
 WHERE order_date < '20210201'
 GROUP BY
     sales.customer_id;
+
 
