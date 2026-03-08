@@ -84,3 +84,17 @@ SELECT
     cancellation
 INTO runner_orders_clean
 FROM string_fix;
+GO
+-- Enforce NOT NULL and PRIMARY KEY constraints on cleaned tables
+-- Required for referential integrity with downstream tables (e.g. ratings) from section D
+ALTER TABLE runner_orders_clean
+    ALTER COLUMN order_id INT NOT NULL;
+GO
+ALTER TABLE runner_orders_clean
+    ADD CONSTRAINT pk_runner_orders_clean PRIMARY KEY (order_id)
+GO
+ALTER TABLE runners
+    ALTER COLUMN runner_id INT NOT NULL;
+GO
+ALTER TABLE runners
+    ADD CONSTRAINT pk_runners PRIMARY KEY (runner_id);

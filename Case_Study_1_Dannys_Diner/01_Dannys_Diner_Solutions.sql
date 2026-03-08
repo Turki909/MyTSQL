@@ -11,7 +11,7 @@
 
 SELECT
     customer_id,
-    CONCAT('$', SUM(price)) AS totalspent
+    SUM(price) AS totalspent
 FROM sales
 INNER JOIN menu
     ON menu.product_id = sales.product_id
