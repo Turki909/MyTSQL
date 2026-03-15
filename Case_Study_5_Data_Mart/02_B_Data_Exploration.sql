@@ -21,22 +21,25 @@ GROUP BY
 -- Q2: What range of week numbers are missing from the dataset?
 ------------------------------------------------------------------------
 
-WITH cte AS (
+-- Recursive CTE : generate rows numbered from 1 to 52, acts as weeks in a year
+-- Note: GENERATE_SERIES(1, 52) can replace this CTE on SQL Server 2022
+WITH all_possible_weeks AS (
     SELECT
         1 AS missing_week_number
     UNION ALL
     SELECT
         missing_week_number + 1
-    FROM cte
+    FROM all_possible_weeks
     WHERE missing_week_number < 52
 )
 SELECT
     missing_week_number
-FROM cte
+FROM all_possible_weeks
 
+-- Using EXCEPT to subtract existing week numbers, leaving only the gaps
 EXCEPT
 
-SELECT DISTINCT
+SELECT
     week_number
 FROM data_mart.clean_weekly_sales;
 
