@@ -11,13 +11,13 @@ logic, data cleaning decisions, and production commentary.
 *Note:* This portfolio focuses on 5 case studies selected for their relevance to data engineering — covering data
 cleaning, complex joins, time-series analysis, and funnel logic.
 
-| 🏆 Case Study                                       | 🏢 Business Domain   | 🛠️ Key Technical Focus                                                                                | 📊 Status   |
-|:----------------------------------------------------|:---------------------|:-------------------------------------------------------------------------------------------------------|:------------|
-| **[#1: Danny's Diner](Case_Study_1_Dannys_Diner/)** | Restaurant & Loyalty | Window Functions, CTE Chaining, Inequality Joins                                                       | ✅ Completed |
-| **[#2: Pizza Runner](Case_Study_2_Pizza_Runner/)**  | Logistics & Delivery | Data Cleaning, String Manipulation (`CROSS APPLY`), Staging Tables (`SELECT INTO`)                     | ✅ Completed |
-| **[#3: Foodie-Fi](Case_Study_3_Foodie-Fi/)**        | SaaS Subscriptions   | Recursive CTEs, Window Functions (`LAG`, `LEAD`), Subscription Analytics, Payment Table Construction   | ✅ Completed |
-| **#5: Data Mart**                                   | E-Commerce Retail    | *(Coming Soon)*                                                                                        | 🚧 In Progress            |
-| **#6: Clique Bait**                                 | Digital Marketing    | *(Coming Soon)*                                                                                        | ❌ Pending   |
+| 🏆 Case Study                                       | 🏢 Business Domain   | 🛠️ Key Technical Focus                                                                              | 📊 Status   |
+|:----------------------------------------------------|:---------------------|:-----------------------------------------------------------------------------------------------------|:------------|
+| **[#1: Danny's Diner](Case_Study_1_Dannys_Diner/)** | Restaurant & Loyalty | Window Functions (`RANK`,`DENSE_RANK`), CTE Chaining, Inequality Joins                               | ✅ Completed |
+| **[#2: Pizza Runner](Case_Study_2_Pizza_Runner/)**  | Logistics & Delivery | Data Cleaning, String Manipulation (`CROSS APPLY`), Staging Tables (`SELECT INTO`)                   | ✅ Completed |
+| **[#3: Foodie-Fi](Case_Study_3_Foodie-Fi/)**        | SaaS Subscriptions   | Recursive CTEs, Window Functions (`LAG`, `LEAD`), Subscription Analytics, Payment Table Construction | ✅ Completed |
+| **[#5: Data Mart](Case_Study_5_Data_Mart/)**        | E-Commerce Retail    | Data Cleansing (`VARCHAR` Date Parsing), Before/After Impact Analysis, `GROUPING SETS`                                       | ✅ Completed            |
+| **#6: Clique Bait**                                 | Digital Marketing    | *(Coming Soon)*                                                                                      | ❌ Pending   |
 
 ---
 > *Disclaimer: All datasets and challenge prompts are the intellectual property of Danny Ma.*

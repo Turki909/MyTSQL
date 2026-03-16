@@ -53,3 +53,20 @@ SELECT
     after_sales - before_sales AS difference,
     CAST(((after_sales - before_sales) * 100.0) / before_sales AS DECIMAL(5, 2)) AS growth
 FROM before_after_sales;
+
+/*
+Key Observations — 12-Week Impact Analysis (2020):
+
+- The business is not declining uniformly — it is shifting. Existing and Guest customers
+  are churning while New customer acquisition is up +1%, suggesting the sustainable
+  packaging change is attracting a new environmentally conscious segment.
+
+- Retail lost -$168M while Shopify gained +$15.7M — this points to platform migration,
+  not pure churn. Customers may be moving online rather than leaving entirely.
+
+- ASIA (-3.26%) and OCEANIA (-3.03%) show the steepest regional declines — sustainable
+  packaging likely increased shipping costs disproportionately for customers in distant regions.
+
+- Europe (+4.73%) is the only region with meaningful growth, possibly indicating stronger
+  environmental consumer sentiment in that market.
+*/
